@@ -63,3 +63,15 @@ body {
     }
   }
 }
+
+.change-color {
+  padding: 8px 10px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  background-color: #c5c5c5;
+
+  &:hover {
+    opacity: 0.9;
+  }
+}
