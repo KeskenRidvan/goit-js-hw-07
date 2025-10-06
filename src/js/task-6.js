@@ -14,7 +14,6 @@ const createBoxes = (amount) => {
   for (let i = 0; i < amount; i++) {
     const box = document.createElement("div");
     const size = 30 + i * 10;
-
     box.style.width = `${size}px`;
     box.style.height = `${size}px`;
     box.style.backgroundColor = getRandomHexColor();
@@ -25,17 +24,26 @@ const createBoxes = (amount) => {
 
 const destroyBoxes = () => {
   container.innerHTML = "";
+
+  container.classList.remove("active-styles");
 };
 
 const handleButtonCreate = () => {
   const amount = Number(input.value);
+  const min = Number(input.min);
+  const max = Number(input.max);
 
-  if (amount >= 1 && amount <= 100) {
+  if (amount >= min && amount <= max) {
     destroyBoxes();
 
     const newBoxes = createBoxes(amount);
     container.append(...newBoxes);
 
+    container.classList.add("active-styles");
+
+    input.value = "";
+  } else {
+    alert(`Please enter a number between ${min} and ${max}.`);
     input.value = "";
   }
 };
