@@ -79,7 +79,7 @@ Write a script that, using DOM properties and methods, performs the following fu
 - Data for each category is retrieved and printed to the console within a loop or using the `forEach()` method.
 - The console should display the following content:
 
-![Console Output](./src/images/homework-image-1.png)
+![Console Output](./images/homework-image-1.png)
 
 ---
 
